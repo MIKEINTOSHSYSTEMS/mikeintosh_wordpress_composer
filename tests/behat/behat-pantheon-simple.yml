@@ -1,0 +1,15 @@
+# behat.yml
+default:
+  suites:
+    default:
+      paths:
+        - ./features/comment.feature
+      contexts:
+        - FeatureContext
+        - Behat\MinkExtension\Context\MinkContext
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://pr-42-example-wordpress-composer.pantheonsite.io/
+      sessions:
+        default:
+          goutte: ~
